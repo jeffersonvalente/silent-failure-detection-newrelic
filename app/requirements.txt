@@ -1,0 +1,4 @@
+flask
+python-dotenv
+newrelic
+newrelic-telemetry-sdk
