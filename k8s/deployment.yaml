@@ -17,8 +17,6 @@ spec:
         - name: alerta-cego
           image: alerta-cego:latest
           imagePullPolicy: Never
-          command: ["/bin/sh", "-c"]
-          args: ["newrelic-admin run-program python app.py"]
           ports:
             - containerPort: 5000
           env:
