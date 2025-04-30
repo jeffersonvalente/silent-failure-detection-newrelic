@@ -125,6 +125,16 @@ NEW_RELIC_USER_KEY=
 NEW_RELIC_ACCOUNT_ID=
 NEW_RELIC_INSERT_KEY=
 ```
+Descrição de cada variável
+
+|Variável	| Descrição |
+|-----------|-----------|
+| NEW_RELIC_LICENSE_KEY	| Chave de licença usada pelo agente do New Relic no container para envio de logs. |
+| NEW_RELIC_APP_NAME	| Nome da aplicação para identificação no New Relic. Usado também no ConfigMap. |
+| NEW_RELIC_LOG_LEVEL	| Nível de log capturado. Recomenda-se info para simular falha silenciosa. |
+| NEW_RELIC_USER_KEY	| API Key de usuário para chamadas GraphQL (scripts de anotação e alertas). |
+| NEW_RELIC_ACCOUNT_ID	| ID da conta New Relic, necessário nos dashboards e nas queries NRQL. |
+| NEW_RELIC_INSERT_KEY	API | Key usada para envio de eventos customizados ao New Relic (como Deployment). |
 
 ---
 
