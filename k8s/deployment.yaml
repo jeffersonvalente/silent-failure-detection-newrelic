@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alerta-cego
+  namespace: observability-lab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alerta-cego
+  template:
+    metadata:
+      labels:
+        app: alerta-cego
+    spec:
+      containers:
+        - name: alerta-cego
+          image: alerta-cego:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: NEW_RELIC_LICENSE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: alerta-cego-secret
+                  key: NEW_RELIC_LICENSE_KEY
+            - name: NEW_RELIC_APP_NAME
+              value: alerta-cego
+            - name: NEW_RELIC_LOG_LEVEL
+              value: info
+          envFrom:
+            - configMapRef:
+                name: alerta-cego-config
