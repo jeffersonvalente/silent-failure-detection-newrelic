@@ -16,6 +16,7 @@ spec:
       containers:
         - name: alerta-cego
           image: alerta-cego:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 5000
           env:
