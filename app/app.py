@@ -8,7 +8,7 @@ import newrelic.agent
 load_dotenv()
 
 # Inicializa o agente da New Relic
-newrelic.agent.initialize('newrelic.ini')
+newrelic.agent.initialize('/app/newrelic.ini')
 
 # Cria instância do app Flask
 app = Flask(__name__)
