@@ -156,5 +156,5 @@ Pull requests com melhorias, plugins adicionais, suporte a outras ferramentas de
 
 ## Contato
 
-LinkedIn: [https://www.linkedin.com/in/jefferson-hoy-valente/](https://www.linkedin.com/in/jefferson-hoy-valente/)
+[🔗 LinkedIn — Jefferson Hoy Valente](https://www.linkedin.com/in/jefferson-hoy-valente/)
 
