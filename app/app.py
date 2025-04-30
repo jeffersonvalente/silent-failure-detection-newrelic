@@ -4,22 +4,20 @@ from flask import Flask, jsonify
 from dotenv import load_dotenv
 import newrelic.agent
 
-# Carrega variáveis de ambiente do .env
+# Carrega variáveis do .env
 load_dotenv()
 
-# Inicializa o agente da New Relic
+# Inicializa o agente do New Relic
 newrelic.agent.initialize('newrelic.ini')
 
-# Instancia o Flask app
+# Instancia app Flask
 app = Flask(__name__)
 
-# Configura o logging com nível INFO
+# Configura logging padrão
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-# Usa o handler do newrelic-logging para enviar logs ao NR Logs
-from newrelic_telemetry_sdk.integrations.logging import NewRelicLogHandler
-logger.addHandler(NewRelicLogHandler())
+# Logs vão automaticamente para o New Relic via newrelic-logging (stdout interceptado)
 
 @app.route("/ok")
 def rota_sucesso():
