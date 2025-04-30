@@ -94,7 +94,7 @@ def send_deployment_event(account_id, insert_key, app_name, commit):
         print(f"Falha ao enviar evento Deployment: {response.status_code} — {response.text}")
 
 def main():
-    print("🔍 Buscando GUID da aplicação...")
+    print("Buscando GUID da aplicação...")
     guid = get_entity_guid(NEW_RELIC_APP_NAME)
     if not guid:
         print(f"GUID não encontrado para aplicação '{NEW_RELIC_APP_NAME}'")
@@ -103,7 +103,7 @@ def main():
     print(f" GUID encontrado: {guid}")
 
     commit = get_git_commit()
-    print(f"📦 Registrando deploy (commit: {commit})...")
+    print(f"Registrando deploy (commit: {commit})...")
 
     result = send_deploy_marker(guid, commit)
     deployment = result.get("data", {}).get("changeTrackingCreateDeployment", {})
