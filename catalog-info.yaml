@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  # ...
+  annotations:
+    newrelic.com/dashboard-guid: NDQzMDA4OXxWSVp8REFTSEJPQVJEfGRhOjkwMjI4NzE
+spec:
+  type: service
